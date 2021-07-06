@@ -2,10 +2,19 @@ import React from "react";
 import BootstrapTable from "react-bootstrap-table-next";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import {Container,Row,Col} from 'react-bootstrap'
+import Cal from './Calendar.js'
+import Calend from './Calendar2'
+
+
 const { SearchBar } = Search;
 
 const columns = [
-    {
+      {
+        dataField: "idEmployee",
+        text: "EmployID",
+        sort: true
+      },
+      {
         dataField: "payrollID",
         text: "ID",
         sort: true
@@ -26,7 +35,7 @@ const columns = [
 
 const defaultSorted = [
   {
-    dataField: "payrollID",
+    dataField: "idEmployee",
     order: "desc"
   }
 ];
@@ -72,7 +81,17 @@ export default class Table1 extends React.Component {
     return (
         <Container>
             <Row>
-                <Col md={12}>
+                <Col lg={6}>
+                  <h3>Start Date</h3>
+                  <Cal></Cal>
+                </Col>
+                <Col lg={6}>
+                <h3>End Date</h3>
+                  <Calend></Calend>
+                  </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={12}>
                     <ToolkitProvider
                         bootstrap4
                         defaultSorted={defaultSorted}
@@ -88,7 +107,7 @@ export default class Table1 extends React.Component {
                             <hr />
                             <BootstrapTable 
                             hover
-                            noDataIndication="No Data Right Nownpm"
+                            noDataIndication="No Data Right Nown"
                             // rowEvents={ rowEvents }
                             {...props.baseProps}
                             />
