@@ -4,7 +4,6 @@ import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import {Container,Row,Col} from 'react-bootstrap'
 import Cal from './Calendar.js'
 import Calend from './Calendar2'
-import Button from 'react-bootstrap/Button'
 
 const { SearchBar } = Search;
 
@@ -104,7 +103,6 @@ export default class Table1 extends React.Component {
                         {props => (
                         <div>
                             <SearchBar {...props.searchProps} />
-                            <Button onClick={this.getItems()}>refresh</Button>
                             <hr />
                             <BootstrapTable 
                             hover
