@@ -105,7 +105,7 @@ export default class Table1 extends React.Component {
                         {props => (
                         <div>
                             <SearchBar {...props.searchProps} />
-                            <Button onClick={getItems()}>refresh</Button>
+                            <button onClick={this.getItems()}>refresh</button>
                             <hr />
                             <BootstrapTable 
                             hover
