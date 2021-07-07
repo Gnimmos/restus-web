@@ -50,7 +50,7 @@ export default class Table1 extends React.Component {
       getItems = () => {
         const that = this;
         const request = new XMLHttpRequest();
-        request.open("GET", "https://restus-api.herokuapp.com/compares", true);
+        request.open("GET", "https://restus-api.herokuapp.com/sql", true);
         request.onload = function get() {
           const data = JSON.parse(this.response);
     
