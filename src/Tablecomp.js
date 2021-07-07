@@ -41,7 +41,7 @@ const defaultSorted = [
 ];
 
 export default class Table1 extends React.Component {
-    state = { compares: [], columns : []};
+    state = { compares: ["loading"], columns : []};
 
     componentDidMount() {
         this.getItems();
